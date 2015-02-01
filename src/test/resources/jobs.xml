@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd" version="1.8">
+  <schedule>
+    <trigger>
+      <cron>
+        <name>my-trigger-0</name>
+        <group>TRIGGER_GROUP</group>
+        <job-name>connect</job-name>
+        <job-group>DEFAULT</job-group>
+        <job-data-map>
+          <entry>
+            <key>source</key>
+            <value>ENEUR</value>
+          </entry>
+          <entry>
+            <key>destination</key>
+            <value>SMDS1</value>
+          </entry>
+        </job-data-map>
+        <cron-expression>0/15 0/2 * * * ?</cron-expression>
+        <time-zone>GMT</time-zone>
+      </cron>
+    </trigger>
+    <trigger>
+      <cron>
+        <name>my-trigger-1</name>
+        <group>TRIGGER_GROUP</group>
+        <job-name>connect</job-name>
+        <job-group>DEFAULT</job-group>
+        <job-data-map>
+          <entry>
+            <key>source</key>
+            <value>ENEUR</value>
+          </entry>
+          <entry>
+            <key>destination</key>
+            <value>R4LW</value>
+          </entry>
+        </job-data-map>
+        <cron-expression>0/15 0/2 * * * ?</cron-expression>
+        <time-zone>GMT</time-zone>
+      </cron>
+    </trigger>
+    <trigger>
+      <cron>
+        <name>my-trigger-2</name>
+        <group>TRIGGER_GROUP</group>
+        <job-name>connect</job-name>
+        <job-group>DEFAULT</job-group>
+        <job-data-map>
+          <entry>
+            <key>source</key>
+            <value>PASHA</value>
+          </entry>
+          <entry>
+            <key>destination</key>
+            <value>SMDS3</value>
+          </entry>
+        </job-data-map>
+        <cron-expression>0/15 1/2 * * * ?</cron-expression>
+        <time-zone>GMT</time-zone>
+      </cron>
+    </trigger>
+  </schedule>
+</job-scheduling-data>
