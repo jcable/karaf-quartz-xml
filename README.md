@@ -25,4 +25,9 @@ Install using hot deploy:
     cp src/test/resources/jobs.xml $KARAF_HOME
     cp target/karaf-quartz-xml-0.0.1-SNAPSHOT.jar $KARAF_HOME/deploy/
 
+Or install via maven:
+
+    mvn install
+    bundle:install -s mvn:wsinteg/karaf-quartz-xml/0.0.1-SNAPSHOT
+
 Use hawtio to see the messages created.
