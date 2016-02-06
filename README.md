@@ -6,18 +6,18 @@ Run on the command line with:
     mvn package
     mvn exec:java
 
-Prepare karaf starting with a clean 3.0.2:
+Prepare karaf starting with a clean 3.0.5:
 
-    feature:repo-add activemq 
-    feature:repo-add hawtio 1.4.45
+    feature:repo-add activemq 5.12.2
+    feature:repo-add hawtio 
 
     feature:install hawtio
     feature:install activemq-broker-noweb 
 
     bundle:install wrap:mvn:c3p0/c3p0/0.9.1.1
     bundle:install wrap:mvn:org.glassfish.main/javax.ejb/4.0-b33
-    bundle:install mvn:org.quartz-scheduler/quartz/2.2.1
-    bundle:install wrap:mvn:org.quartz-scheduler/quartz-jobs/2.2.1
+    bundle:install mvn:org.quartz-scheduler/quartz/2.2.2
+    bundle:install wrap:mvn:org.quartz-scheduler/quartz-jobs/2.2.2
 
 Install using hot deploy:
 
