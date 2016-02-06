@@ -1,9 +1,12 @@
 # karaf-quartz-xml
 OSGI Bundled Quartz Scheduler using xml files and pre-configured with an ActiveMQ message sending Job.
 
+A file called jobs.xml is expected to be in the current working directory. A test one is in src/test/resources.
+
 Run on the command line with:
 
     mvn package
+    cp src/test/resources/jobs.xml .
     mvn exec:java
 
 Prepare karaf starting with a clean 3.0.5:
@@ -28,6 +31,10 @@ Install using hot deploy:
 Or install via maven:
 
     mvn install
+    cp src/test/resources/jobs.xml $KARAF_HOME
+
+then in Karaf:
+
     bundle:install -s mvn:wsinteg/karaf-quartz-xml/0.0.1-SNAPSHOT
 
 Use hawtio to see the messages created.
