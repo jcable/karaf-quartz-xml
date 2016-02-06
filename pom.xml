@@ -30,6 +30,7 @@
   <properties>
     <maven-bundle-plugin.version>2.4.0</maven-bundle-plugin.version>
     <osgi.version>5.0.0</osgi.version>
+    <activemq.version>5.13.0</activemq.version>
   </properties>
   <repositories>
     <repository>
@@ -53,8 +54,18 @@
     </dependency>
     <dependency>
       <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
+      <version>${activemq.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-kahadb-store</artifactId>
+      <version>${activemq.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-client</artifactId>
-      <version>5.13.0</version>
+      <version>${activemq.version}</version>
     </dependency>
     <dependency>
       <groupId>org.quartz-scheduler</groupId>
